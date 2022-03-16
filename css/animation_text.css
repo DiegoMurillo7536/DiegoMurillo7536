@@ -1,0 +1,17 @@
+#Animation{
+    display: block;
+    white-space: nowrap;
+    width: 240ch;
+    font-size: 25px;
+
+    animation: escribiendo 15s steps(240),parpadeo .1s infinite step-end alternate ;
+    overflow: hidden;
+    animation-iteration-count: infinite;
+    
+}
+@keyframes escribiendo{
+    from {width: 0%;}
+}
+@keyframes parpadeo{
+    50%{border-color: transparent;}
+}
