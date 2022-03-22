@@ -1,12 +1,11 @@
 #Animation{
-    display: block;
+   display: absolute;
     white-space: nowrap;
-    width: 240ch;
-    font-size: 25px;
-
-    animation: escribiendo 15s steps(240),parpadeo .1s infinite step-end alternate ;
+    width: 52ch;
+    animation: escribiendo 5s steps(52),parpadeo .3s infinite step-end alternate ;
     overflow: hidden;
-    animation-iteration-count: infinite;
+    margin-left: 40%;
+    align-items: center;
     
 }
 @keyframes escribiendo{
