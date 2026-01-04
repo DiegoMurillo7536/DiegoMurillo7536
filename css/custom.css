@@ -1,0 +1,407 @@
+/* Custom CSS for Portfolio */
+
+/* 
+ * Tailwind Custom Colors - cod-gray palette
+ * 
+ * This palette is defined in tailwind-config.js and also available as CSS variables.
+ * 
+ * Usage examples:
+ * - Tailwind classes: bg-cod-gray-50 (lightest) to bg-cod-gray-950 (darkest)
+ * - CSS variables: var(--cod-gray-50) to var(--cod-gray-950)
+ * - Semantic variables: var(--bg-primary), var(--text-primary), etc.
+ * 
+ * Color scale (defined as CSS variables):
+ * --cod-gray-50:  #f6f6f6  (lightest - use for light mode backgrounds)
+ * --cod-gray-100: #e7e7e7
+ * --cod-gray-200: #d1d1d1
+ * --cod-gray-300: #b0b0b0
+ * --cod-gray-400: #888888
+ * --cod-gray-500: #6d6d6d  (middle)
+ * --cod-gray-600: #5d5d5d
+ * --cod-gray-700: #4f4f4f
+ * --cod-gray-800: #454545
+ * --cod-gray-900: #3d3d3d
+ * --cod-gray-950: #0a0a0a  (darkest - use for dark mode backgrounds)
+ * 
+ * Semantic variables automatically adapt to light/dark mode:
+ * - --bg-primary, --bg-secondary, --bg-tertiary
+ * - --text-primary, --text-secondary, --text-inverse
+ * - --border-color, --border-color-light
+ * - --shadow-color, --overlay-light, --overlay-medium
+ * - --navbar-bg, --navbar-bg-scrolled, --navbar-border
+ * - --mobile-menu-bg, --mobile-menu-border
+ */
+
+/* Custom animations and styles */
+/* Add your custom styles here */
+
+/* ============================================
+   CSS VARIABLES - cod-gray Palette
+   ============================================ */
+
+:root {
+    /* cod-gray color palette */
+    --cod-gray-50: #f6f6f6;
+    --cod-gray-100: #e7e7e7;
+    --cod-gray-200: #d1d1d1;
+    --cod-gray-300: #b0b0b0;
+    --cod-gray-400: #888888;
+    --cod-gray-500: #6d6d6d;
+    --cod-gray-600: #5d5d5d;
+    --cod-gray-700: #4f4f4f;
+    --cod-gray-800: #454545;
+    --cod-gray-900: #3d3d3d;
+    --cod-gray-950: #0a0a0a;
+    
+    /* Light mode color assignments */
+    --bg-primary: var(--cod-gray-50);
+    --bg-secondary: var(--cod-gray-100);
+    --bg-tertiary: var(--cod-gray-200);
+    --text-primary: var(--cod-gray-900);
+    --text-secondary: var(--cod-gray-700);
+    --text-inverse: var(--cod-gray-50);
+    --border-color: var(--cod-gray-300);
+    --border-color-light: var(--cod-gray-200);
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --overlay-light: rgba(0, 0, 0, 0.05);
+    --overlay-medium: rgba(0, 0, 0, 0.1);
+    --navbar-bg: rgba(246, 246, 246, 0.8);
+    --navbar-bg-scrolled: rgba(246, 246, 246, 0.95);
+    --navbar-border: rgba(177, 177, 177, 0.2);
+    --mobile-menu-bg: rgba(246, 246, 246, 0.98);
+    --mobile-menu-border: rgba(177, 177, 177, 0.2);
+}
+
+.dark {
+    /* Dark mode color assignments */
+    --bg-primary: var(--cod-gray-950);
+    --bg-secondary: var(--cod-gray-900);
+    --bg-tertiary: var(--cod-gray-800);
+    --text-primary: var(--cod-gray-50);
+    --text-secondary: var(--cod-gray-300);
+    --text-inverse: var(--cod-gray-900);
+    --border-color: var(--cod-gray-700);
+    --border-color-light: var(--cod-gray-800);
+    --shadow-color: rgba(0, 0, 0, 0.3);
+    --overlay-light: rgba(255, 255, 255, 0.1);
+    --overlay-medium: rgba(255, 255, 255, 0.15);
+    --navbar-bg: rgba(10, 10, 10, 0.8);
+    --navbar-bg-scrolled: rgba(10, 10, 10, 0.95);
+    --navbar-border: rgba(79, 79, 79, 0.2);
+    --mobile-menu-bg: rgba(10, 10, 10, 0.98);
+    --mobile-menu-border: rgba(79, 79, 79, 0.2);
+}
+
+/* Inter Font Configuration */
+body {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    padding-top: 70px;
+}
+
+/* Apply Inter font to all elements */
+* {
+    font-family: "Inter", sans-serif;
+}
+
+/* ============================================
+   NAVBAR STYLES
+   ============================================ */
+
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: var(--navbar-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--navbar-border);
+    transition: all 0.3s ease;
+}
+
+#navbar.navbar-scrolled {
+    background-color: var(--navbar-bg-scrolled);
+    box-shadow: 0 2px 10px var(--shadow-color);
+}
+
+.navbar-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+/* Navbar Brand */
+.navbar-brand a {
+    text-decoration: none;
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.navbar-brand a:hover {
+    opacity: 0.8;
+}
+
+/* Desktop Navigation */
+.navbar-nav-desktop {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .navbar-nav-desktop {
+        display: block;
+    }
+}
+
+.navbar-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 2rem;
+    align-items: center;
+}
+
+.navbar-link {
+    text-decoration: none;
+    color: var(--text-primary);
+    font-weight: 500;
+    font-size: 0.95rem;
+    padding: 0.5rem 0;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.navbar-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--text-primary);
+    transition: width 0.3s ease;
+}
+
+.navbar-link:hover {
+    color: var(--cod-gray-950);
+}
+
+.dark .navbar-link:hover {
+    color: #ffffff;
+}
+
+.navbar-link:hover::after {
+    width: 100%;
+}
+
+.navbar-link.active {
+    color: var(--cod-gray-950);
+    font-weight: 600;
+}
+
+.dark .navbar-link.active {
+    color: #ffffff;
+}
+
+.navbar-link.active::after {
+    width: 100%;
+}
+
+/* Navbar Controls */
+.navbar-controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Language Switcher */
+.language-switcher {
+    display: flex;
+    gap: 0.25rem;
+    background-color: var(--bg-secondary);
+    padding: 0.25rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--border-color-light);
+}
+
+.lang-btn {
+    padding: 0.375rem 0.75rem;
+    border: none;
+    background-color: transparent;
+    color: var(--text-primary);
+    font-weight: 500;
+    font-size: 0.875rem;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.lang-btn:hover {
+    background-color: var(--overlay-light);
+}
+
+.lang-btn-active {
+    background-color: var(--cod-gray-900) !important;
+    color: var(--text-inverse) !important;
+}
+
+.dark .lang-btn-active {
+    background-color: var(--cod-gray-50) !important;
+    color: var(--cod-gray-950) !important;
+}
+
+/* Dark Mode Toggle */
+.dark-mode-btn {
+    padding: 0.5rem;
+    border: 1px solid var(--border-color-light);
+    background-color: var(--bg-secondary);
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.25rem;
+}
+
+.dark-mode-btn:hover {
+    background-color: var(--bg-tertiary);
+    transform: scale(1.05);
+}
+
+/* Mobile Menu Toggle */
+.mobile-menu-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    border: 1px solid var(--border-color-light);
+    background-color: var(--bg-secondary);
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.mobile-menu-btn:hover {
+    background-color: var(--bg-tertiary);
+}
+
+@media (min-width: 768px) {
+    .mobile-menu-btn {
+        display: none;
+    }
+}
+
+.mobile-menu-icon {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 20px;
+    height: 16px;
+    position: relative;
+}
+
+.hamburger-line {
+    width: 100%;
+    height: 2px;
+    background-color: var(--text-primary);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.hamburger-open .hamburger-line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger-open .hamburger-line:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-open .hamburger-line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Mobile Navigation Menu */
+.navbar-nav-mobile {
+    display: block;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background-color: var(--mobile-menu-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-top: 1px solid var(--mobile-menu-border);
+}
+
+.navbar-nav-mobile.mobile-menu-open {
+    max-height: 400px;
+}
+
+.mobile-links {
+    list-style: none;
+    margin: 0;
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.mobile-link {
+    text-decoration: none;
+    color: var(--text-primary);
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    transition: all 0.2s ease;
+    display: block;
+}
+
+.mobile-link:hover {
+    background-color: var(--overlay-light);
+    color: var(--cod-gray-950);
+}
+
+.dark .mobile-link:hover {
+    color: #ffffff;
+}
+
+.mobile-link.active {
+    background-color: var(--overlay-medium);
+    color: var(--cod-gray-950);
+    font-weight: 600;
+}
+
+.dark .mobile-link.active {
+    color: #ffffff;
+}
+
+/* Navbar Hidden State (optional - for hide on scroll) */
+#navbar.navbar-hidden {
+    transform: translateY(-100%);
+}
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Add padding to body to account for fixed navbar */
+@media (min-width: 768px) {
+    body {
+        padding-top: 80px;
+    }
+}
+
