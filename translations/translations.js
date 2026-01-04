@@ -23,7 +23,8 @@ const translations = {
             title: 'Desarrollador Backend',
             description: 'Apasionado por crear soluciones robustas y escalables',
             ctaProjects: 'Ver Proyectos',
-            ctaContact: 'Contactar'
+            ctaContact: 'Contactar',
+            ctaDownloadCV: 'Descargar CV'
         },
         
         // About Section
@@ -96,7 +97,8 @@ const translations = {
             title: 'Backend Developer',
             description: 'Passionate about creating robust and scalable solutions',
             ctaProjects: 'View Projects',
-            ctaContact: 'Contact'
+            ctaContact: 'Contact',
+            ctaDownloadCV: 'Download CV'
         },
         
         // About Section

@@ -51,6 +51,16 @@ const Hero = {
                         <a href="#contact" class="btn btn-secondary" data-i18n="hero.ctaContact">
                             ${heroData.ctaContact || 'Contactar'}
                         </a>
+                        <a href="assets/cv/Diego_Murillo_CV.pdf" 
+                           class="btn btn-cv" 
+                           data-i18n="hero.ctaDownloadCV"
+                           download="Diego_Murillo_CV.pdf"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           aria-label="Descargar CV">
+                            <span class="btn-icon">📄</span>
+                            <span>${heroData.ctaDownloadCV || 'Descargar CV'}</span>
+                        </a>
                     </div>
                 </div>
                 
