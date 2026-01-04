@@ -5,6 +5,7 @@
 
 const Navbar = {
     isMobileMenuOpen: false,
+    clickOutsideHandler: null,
     
     init() {
         this.render();
@@ -191,27 +192,44 @@ const Navbar = {
         const menu = document.getElementById('mobile-menu');
         const mobileLinks = document.querySelectorAll('.mobile-link');
         
-        if (!toggle || !menu) return;
+        if (!toggle || !menu) {
+            console.warn('Mobile menu elements not found');
+            return;
+        }
         
-        toggle.addEventListener('click', () => {
+        // Remove old click outside handler if it exists
+        if (this.clickOutsideHandler) {
+            document.removeEventListener('click', this.clickOutsideHandler);
+            this.clickOutsideHandler = null;
+        }
+        
+        // Add click event to toggle button (use once to avoid duplicates, but we'll manage it manually)
+        toggle.onclick = (e) => {
+            e.stopPropagation();
+            e.preventDefault();
             this.toggleMobileMenu();
-        });
+        };
         
         // Close menu when clicking on a link
         mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
+            link.onclick = () => {
                 this.closeMobileMenu();
-            });
+            };
         });
         
         // Close menu when clicking outside
-        document.addEventListener('click', (e) => {
+        this.clickOutsideHandler = (e) => {
             if (this.isMobileMenuOpen && 
                 !menu.contains(e.target) && 
                 !toggle.contains(e.target)) {
                 this.closeMobileMenu();
             }
-        });
+        };
+        
+        // Use a small delay to ensure the handler is set up correctly
+        setTimeout(() => {
+            document.addEventListener('click', this.clickOutsideHandler);
+        }, 0);
     },
     
     toggleMobileMenu() {
@@ -220,18 +238,25 @@ const Navbar = {
         const toggle = document.getElementById('mobile-menu-toggle');
         const icon = toggle?.querySelector('.mobile-menu-icon');
         
-        if (menu && toggle && icon) {
-            if (this.isMobileMenuOpen) {
-                menu.classList.add('mobile-menu-open');
-                toggle.setAttribute('aria-expanded', 'true');
+        if (!menu || !toggle) {
+            console.warn('Mobile menu elements not found');
+            return;
+        }
+        
+        if (this.isMobileMenuOpen) {
+            menu.classList.add('mobile-menu-open');
+            toggle.setAttribute('aria-expanded', 'true');
+            if (icon) {
                 icon.classList.add('hamburger-open');
-                document.body.style.overflow = 'hidden';
-            } else {
-                menu.classList.remove('mobile-menu-open');
-                toggle.setAttribute('aria-expanded', 'false');
-                icon.classList.remove('hamburger-open');
-                document.body.style.overflow = '';
             }
+            document.body.style.overflow = 'hidden';
+        } else {
+            menu.classList.remove('mobile-menu-open');
+            toggle.setAttribute('aria-expanded', 'false');
+            if (icon) {
+                icon.classList.remove('hamburger-open');
+            }
+            document.body.style.overflow = '';
         }
     },
     

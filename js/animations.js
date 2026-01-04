@@ -6,32 +6,8 @@
 const Animations = {
     init() {
         // Initialize animations after DOM is loaded
-        // Navbar animation is now handled by Navbar.init()
-        this.animateHero();
+        // Navbar and Hero animations are now handled by their respective init() methods
         this.setupScrollAnimations();
-    },
-    
-    animateHero() {
-        // Animate hero section entrance
-        if (typeof anime !== 'undefined') {
-            anime({
-                targets: '#hero h1',
-                translateY: [50, 0],
-                opacity: [0, 1],
-                duration: 1000,
-                delay: 200,
-                easing: 'easeOutExpo'
-            });
-            
-            anime({
-                targets: '#hero p',
-                translateY: [30, 0],
-                opacity: [0, 1],
-                duration: 1000,
-                delay: 400,
-                easing: 'easeOutExpo'
-            });
-        }
     },
     
     setupScrollAnimations() {

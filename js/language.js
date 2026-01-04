@@ -56,6 +56,11 @@ const LanguageManager = {
             Navbar.updateOnLanguageChange();
         }
         
+        // Update hero if it exists
+        if (typeof Hero !== 'undefined') {
+            Hero.updateOnLanguageChange();
+        }
+        
         // Update active button state (after navbar is updated)
         // Use setTimeout to ensure DOM is ready
         setTimeout(() => {

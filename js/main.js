@@ -33,12 +33,19 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 150);
     }
     
+    // Initialize hero section (must be after language system)
+    if (typeof Hero !== 'undefined') {
+        setTimeout(() => {
+            Hero.init();
+        }, 200);
+    }
+    
     // Initialize scroll functionality
     if (typeof ScrollManager !== 'undefined') {
         ScrollManager.init();
     }
     
-    // Initialize animations (navbar animation is handled by Navbar.init)
+    // Initialize animations (navbar and hero animations are handled by their respective init methods)
     if (typeof Animations !== 'undefined') {
         Animations.init();
     }

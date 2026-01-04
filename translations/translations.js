@@ -82,7 +82,7 @@ const translations = {
         nav: {
             home: 'Home',
             about: 'About Me',
-            projects: 'Personal Projects',
+            projects: 'Projects',
             education: 'Education & Experience',
             experience: 'Experience',
             skills: 'Skills',
@@ -107,7 +107,7 @@ const translations = {
         
         // Projects Section
         projects: {
-            title: 'Personal Projects',
+            title: 'Projects',
             viewCode: 'View Code',
             viewDemo: 'View Demo',
             technologies: 'Technologies'
