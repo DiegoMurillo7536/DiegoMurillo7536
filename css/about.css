@@ -1,0 +1,114 @@
+/**
+ * About Section Styles
+ * All styles related to the about section component
+ */
+
+#about {
+    min-height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 2rem 4rem 2rem;
+    position: relative;
+    background-color: var(--bg-primary);
+}
+
+@media (min-width: 768px) {
+    #about {
+        padding: 3rem 2rem 6rem 2rem;
+    }
+}
+
+.about-container {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.about-content {
+    width: 100%;
+    max-width: 800px;
+}
+
+/* About Title */
+.about-title {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--text-primary);
+    margin-bottom: 2.5rem;
+    letter-spacing: -0.02em;
+    opacity: 0;
+}
+
+@media (min-width: 640px) {
+    .about-title {
+        font-size: 2.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .about-title {
+        font-size: 3rem;
+        margin-bottom: 3rem;
+    }
+}
+
+/* About Description Wrapper */
+.about-description-wrapper {
+    margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .about-description-wrapper {
+        margin-bottom: 2rem;
+    }
+}
+
+/* About Description */
+.about-description {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin-bottom: 0;
+    text-align: left;
+    opacity: 0;
+}
+
+@media (min-width: 640px) {
+    .about-description {
+        font-size: 1.125rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .about-description {
+        font-size: 1.25rem;
+        line-height: 1.9;
+    }
+}
+
+/* Personal Description - using hero-title style */
+.about-description-personal {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .about-description-personal {
+        margin-bottom: 2rem;
+    }
+}
+
+/* Professional Description */
+.about-description-professional {
+    text-align: center;
+}
+

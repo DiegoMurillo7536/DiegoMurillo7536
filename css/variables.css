@@ -1,0 +1,86 @@
+/**
+ * CSS Variables
+ * Global color palette and semantic variables for the portfolio
+ * 
+ * This palette is defined in tailwind-config.js and also available as CSS variables.
+ * 
+ * Usage examples:
+ * - Tailwind classes: bg-cod-gray-50 (lightest) to bg-cod-gray-950 (darkest)
+ * - CSS variables: var(--cod-gray-50) to var(--cod-gray-950)
+ * - Semantic variables: var(--bg-primary), var(--text-primary), etc.
+ * 
+ * Color scale (defined as CSS variables):
+ * --cod-gray-50:  #f6f6f6  (lightest - use for light mode backgrounds)
+ * --cod-gray-100: #e7e7e7
+ * --cod-gray-200: #d1d1d1
+ * --cod-gray-300: #b0b0b0
+ * --cod-gray-400: #888888
+ * --cod-gray-500: #6d6d6d  (middle)
+ * --cod-gray-600: #5d5d5d
+ * --cod-gray-700: #4f4f4f
+ * --cod-gray-800: #454545
+ * --cod-gray-900: #3d3d3d
+ * --cod-gray-950: #0a0a0a  (darkest - use for dark mode backgrounds)
+ * 
+ * Semantic variables automatically adapt to light/dark mode:
+ * - --bg-primary, --bg-secondary, --bg-tertiary
+ * - --text-primary, --text-secondary, --text-inverse
+ * - --border-color, --border-color-light
+ * - --shadow-color, --overlay-light, --overlay-medium
+ * - --navbar-bg, --navbar-bg-scrolled, --navbar-border
+ * - --mobile-menu-bg, --mobile-menu-border
+ */
+
+:root {
+    /* cod-gray color palette */
+    --cod-gray-50: #f6f6f6;
+    --cod-gray-100: #e7e7e7;
+    --cod-gray-200: #d1d1d1;
+    --cod-gray-300: #b0b0b0;
+    --cod-gray-400: #888888;
+    --cod-gray-500: #6d6d6d;
+    --cod-gray-600: #5d5d5d;
+    --cod-gray-700: #4f4f4f;
+    --cod-gray-800: #454545;
+    --cod-gray-900: #3d3d3d;
+    --cod-gray-950: #0a0a0a;
+    
+    /* Light mode color assignments */
+    --bg-primary: var(--cod-gray-50);
+    --bg-secondary: var(--cod-gray-100);
+    --bg-tertiary: var(--cod-gray-200);
+    --text-primary: var(--cod-gray-900);
+    --text-secondary: var(--cod-gray-700);
+    --text-inverse: var(--cod-gray-50);
+    --border-color: var(--cod-gray-300);
+    --border-color-light: var(--cod-gray-200);
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --overlay-light: rgba(0, 0, 0, 0.05);
+    --overlay-medium: rgba(0, 0, 0, 0.1);
+    --navbar-bg: rgba(246, 246, 246, 0.8);
+    --navbar-bg-scrolled: rgba(246, 246, 246, 0.95);
+    --navbar-border: rgba(177, 177, 177, 0.2);
+    --mobile-menu-bg: rgba(246, 246, 246, 0.98);
+    --mobile-menu-border: rgba(177, 177, 177, 0.2);
+}
+
+.dark {
+    /* Dark mode color assignments */
+    --bg-primary: var(--cod-gray-950);
+    --bg-secondary: var(--cod-gray-900);
+    --bg-tertiary: var(--cod-gray-800);
+    --text-primary: var(--cod-gray-50);
+    --text-secondary: var(--cod-gray-300);
+    --text-inverse: var(--cod-gray-900);
+    --border-color: var(--cod-gray-700);
+    --border-color-light: var(--cod-gray-800);
+    --shadow-color: rgba(0, 0, 0, 0.3);
+    --overlay-light: rgba(255, 255, 255, 0.1);
+    --overlay-medium: rgba(255, 255, 255, 0.15);
+    --navbar-bg: rgba(10, 10, 10, 0.8);
+    --navbar-bg-scrolled: rgba(10, 10, 10, 0.95);
+    --navbar-border: rgba(79, 79, 79, 0.2);
+    --mobile-menu-bg: rgba(10, 10, 10, 0.98);
+    --mobile-menu-border: rgba(79, 79, 79, 0.2);
+}
+

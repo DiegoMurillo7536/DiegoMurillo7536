@@ -30,7 +30,8 @@ const translations = {
         // About Section
         about: {
             title: 'Sobre Mí',
-            description: 'Descripción personal y profesional...'
+            personalDescription: 'Desarrollador backend apasionado por la tecnología y la naturaleza. Disfruto creando soluciones que realmente ayudan a las personas a resolver problemas complejos.',
+            professionalDescription: 'Especializado en AWS Serverless y Python, diseño soluciones cloud que optimizan procesos y mejoran la eficiencia operativa. Busco colaborar con equipos que valoren la innovación y las mejores prácticas.'
         },
         
         // Projects Section
@@ -38,7 +39,41 @@ const translations = {
             title: 'Proyectos Personales',
             viewCode: 'Ver Código',
             viewDemo: 'Ver Demo',
-            technologies: 'Tecnologías'
+            technologies: 'Tecnologías',
+            items: [
+                {
+                    title: 'Chatbot para recordar eventos importantes',
+                    description: 'Chatbot para recordar eventos importantes, se puede agregar eventos y se puede ver la lista de eventos.',
+                    technologies: ['Python','Llama IA', 'MongoDB', 'Pydantic'],
+                    image: 'images/projects/test_project.jpg',
+                    github: 'https://github.com/diegoa31052004/remember-events',
+                    demo: 'https://remember-events.vercel.app/'
+                },
+                {
+                    title: 'Donación hacia fundaciones de animales',
+                    description: 'Donación hacia fundaciones de animales, se puede donar hacia diferentes fundaciones y se puede ver las metas de cada una de ellas.',
+                    technologies: ['Python', 'FastAPI', 'React', 'TailwindCSS', 'PostgreSQL'],
+                    image: 'images/projects/test_project.jpg',
+                    github: 'https://github.com/diegoa31052004/donation-foundation-animals',
+                    demo: 'https://donation-foundation-animals.vercel.app/'
+                },
+                {
+                    title: 'Aplicación de finanzas personales',
+                    description: 'Aplicación para registar ingresos y gastos con chatbot para realizar consultas sobre las finanzas.',
+                    technologies: ['Python', 'Django', 'Jinja2', 'PostgreSQL', 'Llama IA'],
+                    image: 'images/projects/test_project.jpg',
+                    github: 'https://github.com/example/project3',
+                    demo: 'https://notifications.example.com'
+                },
+                {
+                    title: 'Calendario de eventos',
+                    description: 'Calendario de eventos, se puede agregar eventos y se puede ver la lista de eventos.',
+                    technologies: ['Python', 'Django', 'Jinja2', 'TailwindCSS', 'MySQL'],
+                    image: 'images/projects/test_project.jpg',
+                    github: 'https://github.com/example/project3',
+                    demo: 'https://notifications.example.com'
+                }
+            ]
         },
         
         // Education & Experience
@@ -104,7 +139,8 @@ const translations = {
         // About Section
         about: {
             title: 'About Me',
-            description: 'Personal and professional description...'
+            personalDescription: 'Backend developer passionate about technology and nature. I enjoy creating solutions that truly help people solve complex problems.',
+            professionalDescription: 'Specialized in AWS Serverless and Python, I design cloud solutions that optimize processes and improve operational efficiency. I seek to collaborate with teams that value innovation and best practices.'
         },
         
         // Projects Section
@@ -112,7 +148,41 @@ const translations = {
             title: 'Projects',
             viewCode: 'View Code',
             viewDemo: 'View Demo',
-            technologies: 'Technologies'
+            technologies: 'Technologies',
+            items: [
+                {
+                    title: 'Chatbot to remember important events',
+                    description: 'Chatbot to remember important events, you can add events and view the list of events.',
+                    technologies: ['Python', 'Llama IA', 'MongoDB', 'Pydantic'],
+                    image: 'images/projects/test_project.jpg',
+                    github: 'https://github.com/diegoa31052004/remember-events',
+                    demo: 'https://remember-events.vercel.app/'
+                },
+                {
+                    title: 'Donation to animal foundations',
+                    description: 'Donation to animal foundations, you can donate to different foundations and view the goals of each one.',
+                    technologies: ['Python', 'FastAPI', 'React', 'TailwindCSS', 'PostgreSQL'],
+                    image: 'images/projects/test_project.jpg',
+                    github: 'https://github.com/diegoa31052004/donation-foundation-animals',
+                    demo: 'https://donation-foundation-animals.vercel.app/'
+                },
+                {
+                    title: 'Personal finance application',
+                    description: 'Application to record income and expenses with a chatbot to make queries about finances.',
+                    technologies: ['Python', 'Django', 'Jinja2', 'PostgreSQL', 'Llama IA'],
+                    image: 'images/projects/test_project.jpg',
+                    github: 'https://github.com/example/project3',
+                    demo: 'https://notifications.example.com'
+                },
+                {
+                    title: 'Event calendar',
+                    description: 'Event calendar, you can add events and view the list of events.',
+                    technologies: ['Python', 'Django', 'Jinja2', 'TailwindCSS', 'MySQL'],
+                    image: 'images/projects/test_project.jpg',
+                    github: 'https://github.com/example/project3',
+                    demo: 'https://notifications.example.com'
+                }
+            ]
         },
         
         // Education & Experience

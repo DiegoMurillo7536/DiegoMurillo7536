@@ -1,0 +1,101 @@
+/**
+ * Button Styles
+ * Reusable button component styles used across the portfolio
+ */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.875rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 2px solid transparent;
+    min-width: 160px;
+    opacity: 0;
+    gap: 0.5rem;
+}
+
+.btn-icon {
+    font-size: 1.125rem;
+    line-height: 1;
+}
+
+.btn-primary {
+    background-color: var(--cod-gray-900);
+    color: var(--cod-gray-50);
+    border-color: var(--cod-gray-900);
+}
+
+.dark .btn-primary {
+    background-color: var(--cod-gray-50);
+    color: var(--cod-gray-950);
+    border-color: var(--cod-gray-50);
+}
+
+.btn-primary:hover {
+    background-color: var(--cod-gray-950);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px var(--shadow-color);
+}
+
+.dark .btn-primary:hover {
+    background-color: var(--cod-gray-100);
+    color: var(--cod-gray-950);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--cod-gray-900);
+    border-color: var(--cod-gray-900);
+}
+
+.dark .btn-secondary {
+    color: var(--cod-gray-50);
+    border-color: var(--cod-gray-50);
+}
+
+.btn-secondary:hover {
+    background-color: var(--cod-gray-900);
+    color: var(--cod-gray-50);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px var(--shadow-color);
+}
+
+.dark .btn-secondary:hover {
+    background-color: var(--cod-gray-50);
+    color: var(--cod-gray-950);
+}
+
+/* CV Download Button */
+.btn-cv {
+    background-color: transparent;
+    color: var(--cod-gray-900);
+    border-color: var(--cod-gray-600);
+    border-style: dashed;
+}
+
+.dark .btn-cv {
+    color: var(--cod-gray-50);
+    border-color: var(--cod-gray-500);
+}
+
+.btn-cv:hover {
+    background-color: var(--cod-gray-100);
+    color: var(--cod-gray-950);
+    border-color: var(--cod-gray-900);
+    border-style: solid;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px var(--shadow-color);
+}
+
+.dark .btn-cv:hover {
+    background-color: var(--cod-gray-800);
+    color: var(--cod-gray-50);
+    border-color: var(--cod-gray-50);
+}
+

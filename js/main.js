@@ -40,6 +40,20 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 200);
     }
     
+    // Initialize about section (must be after language system)
+    if (typeof About !== 'undefined') {
+        setTimeout(() => {
+            About.init();
+        }, 250);
+    }
+    
+    // Initialize projects section (must be after language system)
+    if (typeof Projects !== 'undefined') {
+        setTimeout(() => {
+            Projects.init();
+        }, 300);
+    }
+    
     // Initialize scroll functionality
     if (typeof ScrollManager !== 'undefined') {
         ScrollManager.init();
