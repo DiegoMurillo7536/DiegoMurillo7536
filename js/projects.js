@@ -56,6 +56,21 @@ const Projects = {
         
         // Reset animation state when re-rendering
         this.hasAnimated = false;
+        
+        // Setup button handlers to prevent navigation
+        this.setupButtonHandlers();
+    },
+    
+    setupButtonHandlers() {
+        // Prevent navigation when clicking on project buttons
+        const projectButtons = document.querySelectorAll('.project-btn');
+        projectButtons.forEach(button => {
+            button.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                // No hacer nada - simplemente prevenir la navegación
+            });
+        });
     },
     
     renderProjectCard(project, index, projectsData) {
