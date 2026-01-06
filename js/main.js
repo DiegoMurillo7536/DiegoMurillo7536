@@ -61,6 +61,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 350);
     }
     
+    // Initialize skills section (must be after language system)
+    if (typeof Skills !== 'undefined') {
+        setTimeout(() => {
+            Skills.init();
+        }, 400);
+    }
+    
     // Initialize scroll functionality
     if (typeof ScrollManager !== 'undefined') {
         ScrollManager.init();

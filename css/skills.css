@@ -1,0 +1,193 @@
+/**
+ * Skills Section Styles
+ * All styles related to the skills section component
+ */
+
+#skills {
+    min-height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 2rem 4rem 2rem;
+    position: relative;
+    background-color: var(--bg-primary);
+}
+
+@media (min-width: 768px) {
+    #skills {
+        padding: 3rem 2rem 6rem 2rem;
+    }
+}
+
+.skills-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+/* Skills Title */
+.skills-title {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--text-primary);
+    margin-bottom: 3rem;
+    letter-spacing: -0.02em;
+    text-align: center;
+    opacity: 0;
+}
+
+@media (min-width: 640px) {
+    .skills-title {
+        font-size: 2.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .skills-title {
+        font-size: 3rem;
+        margin-bottom: 4rem;
+    }
+}
+
+/* Skills Grid */
+.skills-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+}
+
+@media (min-width: 640px) {
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+    }
+}
+
+/* Skills Category */
+.skills-category {
+    opacity: 0;
+}
+
+.skills-category-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+    text-align: left;
+    opacity: 0;
+}
+
+@media (min-width: 640px) {
+    .skills-category-title {
+        font-size: 1.75rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .skills-category-title {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+}
+
+/* Skills List - Vertical List with Separators in 2 columns */
+.skills-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    column-gap: 2rem;
+}
+
+@media (min-width: 640px) {
+    .skills-list {
+        column-gap: 3rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .skills-list {
+        column-gap: 4rem;
+    }
+}
+
+/* Skill Badge - Vertical List Item */
+.skill-badge {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--text-primary);
+    transition: all 0.2s ease;
+    opacity: 0;
+    padding: 0.875rem 0;
+    position: relative;
+}
+
+@media (min-width: 640px) {
+    .skill-badge {
+        font-size: 1.125rem;
+        padding: 1rem 0;
+    }
+}
+
+@media (min-width: 1024px) {
+    .skill-badge {
+        font-size: 1.25rem;
+        padding: 1.125rem 0;
+    }
+}
+
+/* Animated underline on hover */
+.skill-badge::after {
+    content: '';
+    position: absolute;
+    bottom: 0.5rem;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--text-primary);
+    transition: width 0.3s ease;
+}
+
+@media (min-width: 640px) {
+    .skill-badge::after {
+        bottom: 0.75rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .skill-badge::after {
+        bottom: 0.875rem;
+        height: 2.5px;
+    }
+}
+
+/* Hover effect - animate underline */
+.skill-badge:hover {
+    color: var(--text-primary);
+    padding-left: 0.5rem;
+}
+
+.skill-badge:hover::after {
+    width: 100%;
+}
+
+

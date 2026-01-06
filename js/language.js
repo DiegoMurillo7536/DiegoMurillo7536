@@ -76,6 +76,11 @@ const LanguageManager = {
             EducationExperience.updateOnLanguageChange();
         }
         
+        // Update skills if it exists
+        if (typeof Skills !== 'undefined') {
+            Skills.updateOnLanguageChange();
+        }
+        
         // Update active button state (after navbar is updated)
         // Use setTimeout to ensure DOM is ready
         setTimeout(() => {
