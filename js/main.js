@@ -54,6 +54,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 300);
     }
     
+    // Initialize education & experience section (must be after language system)
+    if (typeof EducationExperience !== 'undefined') {
+        setTimeout(() => {
+            EducationExperience.init();
+        }, 350);
+    }
+    
     // Initialize scroll functionality
     if (typeof ScrollManager !== 'undefined') {
         ScrollManager.init();

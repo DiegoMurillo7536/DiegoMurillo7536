@@ -77,11 +77,38 @@ const translations = {
         },
         
         // Education & Experience
+        educationExperience: {
+            title: 'Educación y Experiencia'
+        },
         education: {
-            title: 'Educación'
+            title: 'Educación',
+            items: [
+                {
+                    title: 'Técnico',
+                    institution: '',
+                    dates: '',
+                    description: '',
+                    achievements: []
+                },
+                {
+                    title: 'Tecnólogo',
+                    institution: '',
+                    dates: '',
+                    description: '',
+                    achievements: []
+                },
+                {
+                    title: 'Carrera Profesional',
+                    institution: '',
+                    dates: 'En curso',
+                    description: '',
+                    achievements: []
+                }
+            ]
         },
         experience: {
-            title: 'Experiencia'
+            title: 'Experiencia',
+            items: []
         },
         
         // Skills Section
@@ -186,11 +213,38 @@ const translations = {
         },
         
         // Education & Experience
+        educationExperience: {
+            title: 'Education & Experience'
+        },
         education: {
-            title: 'Education'
+            title: 'Education',
+            items: [
+                {
+                    title: 'Technical Degree',
+                    institution: '',
+                    dates: '',
+                    description: '',
+                    achievements: []
+                },
+                {
+                    title: 'Technologist',
+                    institution: '',
+                    dates: '',
+                    description: '',
+                    achievements: []
+                },
+                {
+                    title: 'Professional Career',
+                    institution: '',
+                    dates: 'In progress',
+                    description: '',
+                    achievements: []
+                }
+            ]
         },
         experience: {
-            title: 'Experience'
+            title: 'Experience',
+            items: []
         },
         
         // Skills Section

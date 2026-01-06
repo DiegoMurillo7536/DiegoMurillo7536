@@ -1,0 +1,307 @@
+/**
+ * Education & Experience Section Styles
+ * All styles related to the timeline component
+ */
+
+#education-experience {
+    min-height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 2rem 4rem 2rem;
+    position: relative;
+    background-color: var(--bg-primary);
+}
+
+@media (min-width: 768px) {
+    #education-experience {
+        padding: 3rem 2rem 6rem 2rem;
+    }
+}
+
+.education-experience-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+/* Title */
+.education-experience-title {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--text-primary);
+    margin-bottom: 3rem;
+    letter-spacing: -0.02em;
+    text-align: center;
+    opacity: 0;
+}
+
+@media (min-width: 640px) {
+    .education-experience-title {
+        font-size: 2.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .education-experience-title {
+        font-size: 3rem;
+        margin-bottom: 4rem;
+    }
+}
+
+.timeline-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+@media (min-width: 1024px) {
+    .timeline-wrapper {
+        flex-direction: row;
+        gap: 3rem;
+        align-items: flex-start;
+    }
+}
+
+@media (min-width: 1280px) {
+    .timeline-wrapper {
+        gap: 4rem;
+    }
+}
+
+/* Timeline Section */
+.timeline-section {
+    width: 100%;
+}
+
+@media (min-width: 1024px) {
+    .timeline-section {
+        flex: 1;
+        min-width: 0; /* Allows flex items to shrink below their content size */
+        max-width: 50%; /* Each section takes 50% when both exist */
+    }
+}
+
+.timeline-section-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 2rem;
+    text-align: center;
+    opacity: 0;
+}
+
+@media (min-width: 640px) {
+    .timeline-section-title {
+        font-size: 1.75rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .timeline-section-title {
+        font-size: 1.75rem;
+        margin-bottom: 2rem;
+        text-align: left;
+    }
+}
+
+/* Timeline */
+.timeline {
+    position: relative;
+    width: 100%;
+    padding: 2rem 0;
+}
+
+/* Timeline Line */
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 1.5rem;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--border-color);
+    z-index: 0;
+}
+
+/* Timeline Item */
+.timeline-item {
+    position: relative;
+    margin-bottom: 3rem;
+    opacity: 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    width: 100%;
+    padding-left: 3.5rem;
+}
+
+@media (min-width: 1024px) {
+    .timeline-item {
+        padding-left: 3.5rem;
+        margin-bottom: 2.5rem;
+    }
+}
+
+/* Timeline Marker */
+.timeline-marker {
+    position: absolute;
+    left: 1.5rem;
+    top: 0.5rem;
+    width: 1rem;
+    height: 1rem;
+    background-color: var(--text-primary);
+    border: 3px solid var(--bg-primary);
+    border-radius: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    flex-shrink: 0;
+}
+
+/* Timeline Content */
+.timeline-content {
+    flex: 1;
+    width: 100%;
+    text-align: left;
+}
+
+/* Timeline Card */
+.timeline-card {
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--cod-gray-200);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+}
+
+@media (min-width: 640px) {
+    .timeline-card {
+        padding: 2rem;
+    }
+}
+
+.timeline-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Timeline Header */
+.timeline-header {
+    margin-bottom: 1rem;
+}
+
+.timeline-item-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+}
+
+@media (min-width: 640px) {
+    .timeline-item-title {
+        font-size: 1.5rem;
+    }
+}
+
+.timeline-item-institution,
+.timeline-item-company {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    margin-bottom: 0.25rem;
+}
+
+@media (min-width: 640px) {
+    .timeline-item-institution,
+    .timeline-item-company {
+        font-size: 1.125rem;
+    }
+}
+
+.timeline-item-dates {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    font-style: italic;
+    margin-bottom: 0.5rem;
+    opacity: 0.8;
+}
+
+@media (min-width: 640px) {
+    .timeline-item-dates {
+        font-size: 1rem;
+    }
+}
+
+/* Timeline Description */
+.timeline-item-description {
+    font-size: 0.9375rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+@media (min-width: 640px) {
+    .timeline-item-description {
+        font-size: 1rem;
+    }
+}
+
+/* Timeline Lists */
+.timeline-item-achievements,
+.timeline-item-responsibilities {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 1rem;
+}
+
+.timeline-item-achievements li,
+.timeline-item-responsibilities li {
+    font-size: 0.9375rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+@media (min-width: 640px) {
+    .timeline-item-achievements li,
+    .timeline-item-responsibilities li {
+        font-size: 1rem;
+    }
+}
+
+.timeline-item-achievements li::before,
+.timeline-item-responsibilities li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--text-secondary);
+    font-weight: bold;
+}
+
+/* Dark Mode Adjustments */
+.dark .timeline-marker {
+    background-color: var(--cod-gray-50);
+    border-color: var(--cod-gray-950);
+}
+
+.dark .timeline-card {
+    background-color: var(--bg-secondary);
+    border-color: var(--border-color);
+}
+
+.dark .timeline-card:hover {
+    border-color: var(--border-color-light);
+}
+
