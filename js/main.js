@@ -68,6 +68,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 400);
     }
     
+    // Initialize contact section (must be after language system)
+    if (typeof Contact !== 'undefined') {
+        setTimeout(() => {
+            Contact.init();
+        }, 450);
+    }
+    
     // Initialize scroll functionality
     if (typeof ScrollManager !== 'undefined') {
         ScrollManager.init();

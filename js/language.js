@@ -81,6 +81,11 @@ const LanguageManager = {
             Skills.updateOnLanguageChange();
         }
         
+        // Update contact if it exists
+        if (typeof Contact !== 'undefined') {
+            Contact.updateOnLanguageChange();
+        }
+        
         // Update active button state (after navbar is updated)
         // Use setTimeout to ensure DOM is ready
         setTimeout(() => {

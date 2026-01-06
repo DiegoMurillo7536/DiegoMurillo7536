@@ -1,0 +1,218 @@
+/**
+ * Contact Section Styles
+ * All styles related to the contact section component
+ */
+
+#contact {
+    min-height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 2rem 4rem 2rem;
+    position: relative;
+    background-color: var(--bg-primary);
+}
+
+@media (min-width: 768px) {
+    #contact {
+        padding: 3rem 2rem 6rem 2rem;
+    }
+}
+
+.contact-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+/* Contact Title */
+.contact-title {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
+    opacity: 0;
+}
+
+@media (min-width: 640px) {
+    .contact-title {
+        font-size: 2.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .contact-title {
+        font-size: 3rem;
+        margin-bottom: 2rem;
+    }
+}
+
+/* Contact Subtitle */
+.contact-subtitle {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 3rem;
+    opacity: 0;
+}
+
+@media (min-width: 640px) {
+    .contact-subtitle {
+        font-size: 1.125rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .contact-subtitle {
+        font-size: 1.25rem;
+        margin-bottom: 4rem;
+    }
+}
+
+/* Contact Content */
+.contact-content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contact Links Container */
+.contact-links {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+@media (min-width: 640px) {
+    .contact-links {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .contact-links {
+        gap: 2rem;
+    }
+}
+
+/* Contact Link Base Styles */
+.contact-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.25rem 1.5rem;
+    background-color: var(--bg-primary);
+    border: 2px solid var(--text-primary);
+    border-radius: 0.5rem;
+    color: var(--text-primary);
+    text-decoration: none;
+    font-size: 1.125rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    opacity: 0;
+    cursor: pointer;
+    width: 100%;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+@media (min-width: 640px) {
+    .contact-link {
+        padding: 1.5rem 2rem;
+        font-size: 1.125rem;
+        gap: 1.25rem;
+        width: auto;
+        flex: 1;
+        min-width: 0;
+    }
+}
+
+@media (min-width: 1024px) {
+    .contact-link {
+        padding: 1.75rem 2.5rem;
+        font-size: 1.25rem;
+        gap: 1.5rem;
+    }
+}
+
+/* Hover effect for all contact links */
+.contact-link:hover {
+    background-color: var(--text-primary);
+    color: var(--bg-primary);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.contact-link:active {
+    transform: translateY(0);
+}
+
+/* Contact Icon */
+.contact-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+@media (min-width: 640px) {
+    .contact-icon {
+        width: 1.75rem;
+        height: 1.75rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .contact-icon {
+        width: 2rem;
+        height: 2rem;
+    }
+}
+
+.contact-link:hover .contact-icon {
+    transform: scale(1.1);
+}
+
+/* Contact Link Text */
+.contact-link-text {
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    text-align: center;
+    white-space: nowrap;
+}
+
+@media (min-width: 640px) {
+    .contact-link-text {
+        font-size: 1.125rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .contact-link-text {
+        font-size: 1.25rem;
+    }
+}
+
+/* Allow email text to wrap if needed on smaller screens */
+@media (max-width: 639px) {
+    .contact-email-link .contact-link-text {
+        white-space: normal;
+        word-break: break-all;
+    }
+}
+
