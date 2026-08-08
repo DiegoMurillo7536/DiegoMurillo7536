@@ -4,7 +4,7 @@
  */
 
 const LanguageManager = {
-    currentLanguage: 'es',
+    currentLanguage: 'en',
     translations: null,
     
     init() {
@@ -17,7 +17,7 @@ const LanguageManager = {
         this.translations = translations;
         
         // Load saved language preference or default to Spanish
-        const savedLanguage = localStorage.getItem('portfolio-language') || 'es';
+        const savedLanguage = localStorage.getItem('portfolio-language') || 'en';
         this.setLanguage(savedLanguage);
         this.setupLanguageButtons();
     },

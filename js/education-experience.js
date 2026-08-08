@@ -60,11 +60,24 @@ const EducationExperience = {
             </div>
         `;
         
+        // Setup toggle buttons for collapsed details
+        this.setupToggleHandlers();
+        
         // Reset animation state when re-rendering
         this.hasAnimated = false;
     },
     
     renderTimelineItem(item, index, type) {
+        const currentLang = LanguageManager.getCurrentLanguage();
+        const translations = LanguageManager.translations[currentLang];
+        const viewDetailsText = translations?.educationExperience?.viewDetails || 'Ver detalles';
+        
+        const hasDetails = !!item.description ||
+            (item.achievements && item.achievements.length > 0) ||
+            (item.responsibilities && item.responsibilities.length > 0);
+        
+        const detailsId = `timeline-details-${type}-${index}`;
+        
         return `
             <div class="timeline-item" data-timeline-index="${index}">
                 <div class="timeline-marker"></div>
@@ -79,27 +92,46 @@ const EducationExperience = {
                                 <p class="timeline-item-dates">${item.dates}</p>
                             ` : ''}
                         </div>
-                        ${item.description ? `
-                            <p class="timeline-item-description">${item.description}</p>
-                        ` : ''}
-                        ${item.achievements && item.achievements.length > 0 ? `
-                            <ul class="timeline-item-achievements">
-                                ${item.achievements.map(achievement => `
-                                    <li>${achievement}</li>
-                                `).join('')}
-                            </ul>
-                        ` : ''}
-                        ${item.responsibilities && item.responsibilities.length > 0 ? `
-                            <ul class="timeline-item-responsibilities">
-                                ${item.responsibilities.map(responsibility => `
-                                    <li>${responsibility}</li>
-                                `).join('')}
-                            </ul>
+                        ${hasDetails ? `
+                            <button type="button" class="timeline-details-toggle" aria-expanded="false" aria-controls="${detailsId}">
+                                ${viewDetailsText}
+                            </button>
+                            <div class="timeline-item-details" id="${detailsId}">
+                                ${item.description ? `
+                                    <p class="timeline-item-description">${item.description}</p>
+                                ` : ''}
+                                ${item.achievements && item.achievements.length > 0 ? `
+                                    <ul class="timeline-item-achievements">
+                                        ${item.achievements.map(achievement => `
+                                            <li>${achievement}</li>
+                                        `).join('')}
+                                    </ul>
+                                ` : ''}
+                                ${item.responsibilities && item.responsibilities.length > 0 ? `
+                                    <ul class="timeline-item-responsibilities">
+                                        ${item.responsibilities.map(responsibility => `
+                                            <li>${responsibility}</li>
+                                        `).join('')}
+                                    </ul>
+                                ` : ''}
+                            </div>
                         ` : ''}
                     </div>
                 </div>
             </div>
         `;
+    },
+    
+    setupToggleHandlers() {
+        const buttons = document.querySelectorAll('.timeline-details-toggle');
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                const details = document.getElementById(button.getAttribute('aria-controls'));
+                if (!details) return;
+                const isOpen = details.classList.toggle('timeline-item-details-open');
+                button.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+            });
+        });
     },
     
     setupScrollAnimation() {

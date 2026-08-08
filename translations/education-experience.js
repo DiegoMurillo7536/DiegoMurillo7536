@@ -6,7 +6,8 @@
 const educationExperienceTranslations = {
     es: {
         educationExperience: {
-            title: 'Educación y Experiencia'
+            title: 'Educación y Experiencia',
+            viewDetails: 'Ver detalles'
         },
         education: {
             title: 'Educación',
@@ -23,21 +24,21 @@ const educationExperienceTranslations = {
                     ]
                 },
                 {
-                    title: 'Tecnólogo en Análisis y Desarrollo de Software (ADSO)',
+                    title: 'Tecnólogo en Desarrollo de Software (ADSO)',
                     institution: 'Servicio Nacional de Aprendizaje (SENA)',
                     dates: '2022 - 2023',
-                    description: 'Carrera tecnológica para profundizar en el desarrollo de aplicaciones de software con ayuda de Java, Python, Angular, entre otras tecnologías.',
+                    description: 'Carrera tecnológica para el desarrollo de software con Java, Python y Angular.',
                     achievements: [
-                        'Con ayuda de mis compañeros de estudio, implementamos un ecommerce para ropa infantil con ayuda de Python y Django.',
+                        'Implementé con mi equipo un ecommerce de ropa infantil con Python y Django.',
                     ]
                 },
                 {
                     title: 'Técnico en Programación de Software',
                     institution: 'Servicio Nacional de Aprendizaje (SENA)',
                     dates: '2020 - 2021',
-                    description: 'Carrera técnica para comenzar a desarrollar aplicaciones de software con ayuda de HTML, CSS, JavaScript y PHP.',
+                    description: 'Carrera técnica para el desarrollo de software con HTML, CSS, JavaScript y PHP.',
                     achievements: [
-                        'Logré crear el observador del colegio donde se podían registrar las diferentes novedades de los estudiantes con ayuda de HTML, CSS, JavaScript y PHP.',
+                        'Creé el observador del colegio para registrar las novedades de los estudiantes.',
                     ]
                 },
 
@@ -47,9 +48,20 @@ const educationExperienceTranslations = {
             title: 'Experiencia',
             items: [
                 {
+                    title: 'Software Developer',
+                    institution: 'Habi',
+                    dates: 'Abril 2026 - Presente',
+                    achievements: [
+                        'Creé una skill para resolver 222 vulnerabilidades en los repositorios del equipo.',
+                        'Creé un webhook para comprar un documento en caso de que el último documento estuviera vencido; comprábamos 9 archivos por día.',
+                        'Implementé la creación masiva de cupos para evitar el proceso manual, que tardaba 1 hora a mano y ahora tarda 20 minutos.',
+                        'Trabajé con compañeros externos para crear un endpoint GET con diferentes filtros, con un token JWT que se renueva cada 30 minutos.'
+                    ]
+                },
+                {
                     title: 'Solutions Engineer',
                     institution: 'Habi',
-                    dates: 'Octubre 2023 - Presente',
+                    dates: 'Octubre 2023 - Abril 2026',
                     description: 'Desarrollo y mantenimiento de aplicaciones con código, No Code y Low Code.',
                     achievements: [
                         'Construí una automatización para un proceso que duraba un día, actualmente tarda entre 2 y 35 minutos.',
@@ -75,7 +87,8 @@ const educationExperienceTranslations = {
     
     en: {
         educationExperience: {
-            title: 'Education & Experience'
+            title: 'Education & Experience',
+            viewDetails: 'View details'
         },
         education: {
             title: 'Education',
@@ -92,21 +105,21 @@ const educationExperienceTranslations = {
                     ]
                 },
                 {
-                    title: 'Technologist in Software Analysis and Development (ADSO)',
+                    title: 'Software Development Technologist (ADSO)',
                     institution: 'Servicio Nacional de Aprendizaje (SENA)',
                     dates: '2022 - 2023',
-                    description: 'Technological program to deepen software application development using Java, Python, Angular, among other technologies.',
+                    description: 'Technological program for software development with Java, Python, and Angular.',
                     achievements: [
-                        'With the help of my study partners, we implemented an ecommerce for children\'s clothing using Python and Django.',
+                        'With my team, implemented a children\'s clothing ecommerce using Python and Django.',
                     ]
                 },
                 {
                     title: 'Technical Degree in Software Programming',
                     institution: 'Servicio Nacional de Aprendizaje (SENA)',
                     dates: '2020 - 2021',
-                    description: 'Technical program to start developing software applications using HTML, CSS, JavaScript, and PHP.',
+                    description: 'Technical program for software development with HTML, CSS, JavaScript, and PHP.',
                     achievements: [
-                        'Successfully created the school observer system where different student incidents could be registered using HTML, CSS, JavaScript, and PHP.',
+                        'Created the school observer system to register student incidents.',
                     ]
                 },
 
@@ -116,9 +129,20 @@ const educationExperienceTranslations = {
             title: 'Experience',
             items: [
                 {
+                    title: 'Software Developer',
+                    institution: 'Habi',
+                    dates: 'April 2026 - Present',
+                    achievements: [
+                        'Created a skill to resolve 222 vulnerabilities in the team\'s repositories.',
+                        'Created a webhook to purchase a document in case the latest document expired; bought 9 files per day.',
+                        'Implemented massive schedule creation to avoid a manual process that took 1 hour and now takes 20 minutes.',
+                        'Worked with external coworkers to create a GET endpoint with different filters, using a JWT token that refreshes every 30 minutes.'
+                    ]
+                },
+                {
                     title: 'Solutions Engineer',
                     institution: 'Habi',
-                    dates: 'October 2023 - Present',
+                    dates: 'October 2023 - April 2026',
                     description: 'Development and maintenance of applications with code, No Code, and Low Code.',
                     achievements: [
                         'Built an automation for a process that took one day, now it takes between 2 and 35 minutes.',

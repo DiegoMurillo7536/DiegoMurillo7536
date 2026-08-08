@@ -13,6 +13,11 @@ document.addEventListener('DOMContentLoaded', () => {
         DarkMode.init();
     }
     
+    // Initialize 3D background (after dark mode so the initial theme is applied)
+    if (typeof Background3D !== 'undefined') {
+        Background3D.init();
+    }
+    
     // Initialize language system (must be after translations are loaded)
     if (typeof LanguageManager !== 'undefined' && typeof translations !== 'undefined') {
         LanguageManager.init();
