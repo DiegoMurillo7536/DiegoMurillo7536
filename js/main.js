@@ -52,13 +52,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 250);
     }
     
-    // Initialize projects section (must be after language system)
-    if (typeof Projects !== 'undefined') {
-        setTimeout(() => {
-            Projects.init();
-        }, 300);
-    }
-    
     // Initialize education & experience section (must be after language system)
     if (typeof EducationExperience !== 'undefined') {
         setTimeout(() => {

@@ -8,7 +8,6 @@ const navbarTranslations = {
         nav: {
             home: 'Inicio',
             about: 'Sobre Mí',
-            projects: 'Proyectos Personales',
             education: 'Educación y Experiencia',
             experience: 'Experiencia',
             skills: 'Habilidades',
@@ -20,7 +19,6 @@ const navbarTranslations = {
         nav: {
             home: 'Home',
             about: 'About Me',
-            projects: 'Projects',
             education: 'Education & Experience',
             experience: 'Experience',
             skills: 'Skills',

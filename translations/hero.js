@@ -10,7 +10,6 @@ const heroTranslations = {
             name: 'Diego Alexander Murillo Suárez',
             title: 'Desarrollador Backend',
             description: 'Apasionado por crear soluciones robustas y escalables',
-            ctaProjects: 'Ver Proyectos',
             ctaContact: 'Contactar',
             ctaDownloadCV: 'Descargar CV'
         }
@@ -22,7 +21,6 @@ const heroTranslations = {
             name: 'Diego Alexander Murillo Suárez',
             title: 'Backend Developer',
             description: 'Passionate about creating robust and scalable solutions',
-            ctaProjects: 'View Projects',
             ctaContact: 'Contact',
             ctaDownloadCV: 'Download CV'
         }

@@ -45,20 +45,6 @@ const Animations = {
         }
     },
     
-    animateProjects() {
-        // Stagger animation for project cards
-        if (typeof anime !== 'undefined') {
-            anime({
-                targets: '.project-card',
-                translateY: [50, 0],
-                opacity: [0, 1],
-                duration: 800,
-                delay: anime.stagger(100),
-                easing: 'easeOutExpo'
-            });
-        }
-    },
-    
     animateSkills() {
         // Animate skill bars or counters
         if (typeof anime !== 'undefined') {
