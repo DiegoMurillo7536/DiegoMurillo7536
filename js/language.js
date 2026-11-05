@@ -66,11 +66,6 @@ const LanguageManager = {
             About.updateOnLanguageChange();
         }
         
-        // Update projects if it exists
-        if (typeof Projects !== 'undefined') {
-            Projects.updateOnLanguageChange();
-        }
-        
         // Update education & experience if it exists
         if (typeof EducationExperience !== 'undefined') {
             EducationExperience.updateOnLanguageChange();

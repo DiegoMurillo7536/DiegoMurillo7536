@@ -45,19 +45,15 @@ const Hero = {
                     
                     <!-- CTA Buttons -->
                     <div class="hero-cta">
-                        <a href="#projects" class="btn btn-primary" data-i18n="hero.ctaProjects">
-                            ${heroData.ctaProjects || 'Ver Proyectos'}
-                        </a>
                         <a href="#contact" class="btn btn-secondary" data-i18n="hero.ctaContact">
                             ${heroData.ctaContact || 'Contactar'}
                         </a>
-                        <a href="#" 
+                        <a href="documents/Diego_Murillo_CV.pdf" 
                            class="btn btn-cv" 
-                           data-i18n="hero.ctaDownloadCV"
-                           onclick="return false;"
-                           aria-label="Descargar CV">
+                           download="Diego_Murillo_CV.pdf"
+                           aria-label="${heroData.ctaDownloadCV || 'Descargar CV'}">
                             <span class="btn-icon">📄</span>
-                            <span>${heroData.ctaDownloadCV || 'Descargar CV'}</span>
+                            <span data-i18n="hero.ctaDownloadCV">${heroData.ctaDownloadCV || 'Descargar CV'}</span>
                         </a>
                     </div>
                 </div>

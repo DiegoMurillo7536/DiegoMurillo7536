@@ -46,14 +46,6 @@ const Navbar = {
                             </a>
                         </li>
                         <li>
-                            <a href="#projects" 
-                               class="navbar-link" 
-                               data-i18n="nav.projects"
-                               data-section="projects">
-                                ${translations?.nav?.projects || 'Proyectos'}
-                            </a>
-                        </li>
-                        <li>
                             <a href="#education-experience" 
                                class="navbar-link" 
                                data-i18n="nav.education"
@@ -134,14 +126,6 @@ const Navbar = {
                            data-i18n="nav.about"
                            data-section="about">
                             ${translations?.nav?.about || 'Sobre Mí'}
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#projects" 
-                           class="mobile-link" 
-                           data-i18n="nav.projects"
-                           data-section="projects">
-                            ${translations?.nav?.projects || 'Proyectos'}
                         </a>
                     </li>
                     <li>

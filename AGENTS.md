@@ -28,7 +28,5 @@ Static portfolio site (Diego Murillo). Vanilla HTML/CSS/JS — no package.json, 
 
 ## Gotchas
 
-- Project cards (`js/projects.js`) deliberately `preventDefault()` on `.project-btn` clicks — links intentionally don't navigate.
 - Dark mode toggles the `.dark` class on `<html>`; persisted as `portfolio-dark-mode`.
-- `images/projects/` holds project card images (only `test_project.jpg` today).
 - `.gitignore` only excludes `TODO.md`.
